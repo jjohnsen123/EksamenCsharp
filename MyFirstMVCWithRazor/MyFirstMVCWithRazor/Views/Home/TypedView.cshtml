@@ -1,0 +1,45 @@
+﻿@model MyFirstMVCWithRazor.ViewModels.HomeModel
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>TypedView</title>
+</head>
+<body>
+    <div>
+        @*Dette er et model-baseret view
+        <br />
+        antal er: @Model.Antal
+
+
+        @for (int i = 1; i <= Model.Antal; i++)
+        {
+            @:x
+            <div>
+                næste tal er: @i
+                <br />
+            </div>
+        }*@
+
+
+
+        @using (Html.BeginForm())
+        {
+            @Html.Label("Antal")
+            @Html.TextBox("Antal")
+            <br />
+            @Html.Label("Varetype")
+            @Html.TextBox("Varetype")
+
+            <input type="submit" value="Klik" />
+        }
+
+    </div>
+</body>
+</html>

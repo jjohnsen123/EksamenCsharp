@@ -1,0 +1,35 @@
+﻿
+@model MyFirstMVCWithRazor.ViewModels.HomeModel
+@{
+    Layout = null;
+}
+
+
+<!DOCTYPE html>
+
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div>
+
+
+        @Html.ActionLink("klik her","GetPerson")
+        <br />
+        @Html.ActionLink("Med routevalues", "GetPerson", new { Fornavn = "Ib", Efternavn = "Ibsen" });
+
+        Her er x fra ViewData: @ViewData["x"]
+        <br />
+        Her er y fra ViewBag: @ViewBag.yy
+        <br />
+
+        @*Her er z fra Model: @Model.Antal*@
+
+
+
+    </div>
+</body>
+</html>

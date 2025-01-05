@@ -1,0 +1,22 @@
+﻿@using MyFirstMVCWithRazor.Models
+
+@model Person
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>PersonView</title>
+</head>
+<body>
+    <div> 
+        @Model.Fornavn 
+        <br />
+        @Model.Efternavn
+    </div>
+</body>
+</html>
