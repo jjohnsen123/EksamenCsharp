@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Microsoft.VisualBasic;
 
 namespace Exercise4._1.a
 {
@@ -13,6 +14,12 @@ namespace Exercise4._1.a
         {
             CalculateAndDisplay(3, 7, Add);
             CalculateAndDisplay(3,7,Multiply);
+
+            CalculateAndDisplay(5, 25, Divide);
+
+            CalculateAndDisplay(5, 100, (a, b) => a / b);
+
+
         }
         private static void CalculateAndDisplay(int a, int b, Operation operation)
         {
@@ -28,5 +35,14 @@ namespace Exercise4._1.a
         {
             return a * b;
         }
+
+        private static int Divide(int a, int b)
+        {
+            return a / b;
+        }
+
     }
+
 }
+
+

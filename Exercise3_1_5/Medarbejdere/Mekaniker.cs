@@ -6,7 +6,12 @@ using System.Threading.Tasks;
 
 namespace Medarbejdere
 {
-    internal class Mekaniker : Medarbejder
+    interface Person
+    {
+        int getTimer();
+    }
+
+    internal class Mekaniker : Medarbejder, Person
     {
         public Mekaniker(string navn, string adresse, CprNr cprnr, string medarbejderNummer, DateTime svendeproeve, decimal timeloen) : base(navn, adresse, cprnr, medarbejderNummer)
         {
@@ -16,6 +21,12 @@ namespace Medarbejdere
 
         public DateTime Svendeproeve { get; set; }
         public Decimal Timeloen { get; set; }
+
+        // Interface
+        public int getTimer()
+        {
+            return 10;
+        }
 
         public override decimal BeregnUgeLoen()
         {
